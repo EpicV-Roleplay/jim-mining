@@ -4,7 +4,7 @@ Loc = {}
 Config = {}
 
 Config = {
-	Blips = true, -- Enable Blips?
+	Blips = false, -- Enable Blips?
 	BlipNamer = false, -- Enable to Name Blips different things, disable if you already have too many blips as this will group them together
 	PropSpawn = true, -- Enable Ore Props
 	Pedspawn = true, -- Do you want to spawn peds for main locations?
@@ -16,7 +16,7 @@ Config = {
 }
 Config.Lan = "en" -- Pick your language here
 
-Config.ImageLink = "qb-inventory/html/images/" --Set this to the image directory of your inventory script
+Config.ImageLink = "lj-inventory/html/images/" --Set this to the image directory of your inventory script
 
 --Blips and Locations
 -- Each one has individual blip enablers
