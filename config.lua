@@ -4,7 +4,7 @@ Loc = {}
 Config = {}
 
 Config = {
-	Blips = true, -- Enable Blips?
+	Blips = false, -- Enable Blips?
 	BlipNamer = false, -- Enable to Name Blips different things, disable if you already have too many blips as this will group them together
 	PropSpawn = true, -- Enable Ore Props
 	Pedspawn = true, -- Do you want to spawn peds for main locations?
@@ -14,21 +14,21 @@ Config = {
 	Fade = true, -- Do you want the peds to fade into/out of existence? It looks better than just *POP* its there.
 	Distance = 40.0, --The distance you want peds to spawn at
 }
-Config.Lan = "en" -- Pick your language here
+Config.Lan = "de" -- Pick your language here
 
-Config.ImageLink = "qb-inventory/html/images/" --Set this to the image directory of your inventory script
+Config.ImageLink = "lj-inventory/html/images/" --Set this to the image directory of your inventory script
 
 --Blips and Locations
 -- Each one has individual blip enablers
 -- Mine and Mine Leave have headings for the player locations
 Config.Locations =  {
 	['Mine'] = { name = "Mine", location = vector3(-595.15,2091.23,131.46-1.03), heading = 61.59, blipTrue = true }, -- The location where you enter the mine 
-	['Quarry'] = { name = "Quarry", location = vector3(2961.02, 2754.14, 43.71-1.03), heading = 200.0, blipTrue = true }, -- The location where you enter the mine 
-	['Smelter'] = {	name = "Smelter", location = vector3(1112.29, -2009.9, 31.46), blipTrue = true }, -- The location of the smelter
-	['Cracking'] = { name = "Stone Cracking", location = vector3(1109.27,-1992.68,30.99-1.03), heading = 305.0-180.0, blipTrue = false }, -- The location of the smelter
-	['Buyer'] = { name = "Ore Buyer", location = vector3(1085.7,-2001.04,31.41-1.03), heading = 323.73, blipTrue = false }, -- The Location of the ore buyer
-	['JewelCut'] = { name = "Jewel Cutting", location = vector3(1077.24, -1984.22, 31.0-0.97), heading = 300.0, blipTrue = false }, -- The Location of the jewel cutting bench. Couldn't decide so left in smeltery
-	['Buyer2'] = { name = "Jewel Buyer", location = vector3(-629.85, -240.31, 38.16-1.03), heading = 105.74, blipTrue = false }, -- The Location of the jewel buyer, I left this as Vangelico, others will proabably change to pawn shops
+	['Quarry'] = { name = "Steinbruch", location = vector3(2961.02, 2754.14, 43.71-1.03), heading = 200.0, blipTrue = true }, -- The location where you enter the mine 
+	['Smelter'] = {	name = "Schmelzwerk", location = vector3(1112.29, -2009.9, 31.46), blipTrue = true }, -- The location of the smelter
+	['Cracking'] = { name = "Steinbrecher", location = vector3(1109.27,-1992.68,30.99-1.03), heading = 305.0-180.0, blipTrue = false }, -- The location of the smelter
+	['Buyer'] = { name = "Erz-Käufer", location = vector3(1085.7,-2001.04,31.41-1.03), heading = 323.73, blipTrue = false }, -- The Location of the ore buyer
+	['JewelCut'] = { name = "Juwelenschliff", location = vector3(1077.24, -1984.22, 31.0-0.97), heading = 300.0, blipTrue = false }, -- The Location of the jewel cutting bench. Couldn't decide so left in smeltery
+	['Buyer2'] = { name = "Juwelenkäufer", location = vector3(-629.85, -240.31, 38.16-1.03), heading = 105.74, blipTrue = false }, -- The Location of the jewel buyer, I left this as Vangelico, others will proabably change to pawn shops
 }
 
 ------------------------------------------------------------
@@ -52,10 +52,10 @@ Config.OrePositions = {
 -----------------------------------------------------------
 
 Config.RewardPool = {
-	'carbon', 'carbon', 'carbon', 'carbon', --4x
-	'copperore', 'copperore', 'copperore', 'copperore', 'copperore', 'copperore', -- 6x
-	'goldore', 'goldore', 'goldore', --'goldore', -- 3x
-	'ironore', 'ironore', 'ironore', 'ironore', -- 'ironore', 'ironore', -- 6x
+	'carbon', 'carbon', 'carbon', 'carbon','carbon', 'carbon', 'carbon', 'carbon','carbon', 'carbon', 'carbon', 'carbon','carbon', 'carbon', 'carbon', 'carbon', --4x
+	'copperore', 'copperore', 'copperore', 'copperore', 'copperore', 'copperore','copperore', 'copperore', 'copperore', 'copperore', 'copperore', 'copperore','copperore', 'copperore', 'copperore', 'copperore', 'copperore', 'copperore', -- 6x
+	'goldore', --'goldore', -- 3x
+	'ironore', 'ironore', 'ironore', 'ironore','ironore', 'ironore', 'ironore', 'ironore','ironore', 'ironore', 'ironore', 'ironore','ironore', 'ironore', 'ironore', 'ironore', -- 'ironore', 'ironore', -- 6x
     'metalscrap',
 	'uncut_ruby',
 	'uncut_emerald',
@@ -130,24 +130,24 @@ Config.MineLights = {
 ------------------------------------------------------------
 --Mining Store Items
 Config.Items = {
-    label = "Mining Store",  slots = 7,
+    label = "Bergbaulager",  slots = 7,
     items = {
-	[1] = { name = "water_bottle", price = 0, amount = 100, info = {}, type = "item", slot = 1, },
-	[2] = { name = "sandwich", price = 0, amount = 250, info = {}, type = "item", slot = 2, },
-	[3] = { name = "bandage", price = 0, amount = 100, info = {}, type = "item", slot = 3, },
-	[4] = { name = "weapon_flashlight", price = 0, amount = 100, info = {}, type = "item", slot = 4, }, 
-	[5] = { name = "drill",	price = 0, amount = 100, info = {}, type = "item", slot = 5, }, 
-	[6] = { name = "handdrill",	price = 0, amount = 100, info = {}, type = "item",	slot = 6, },
-	[7] = { name = "drillbit", price = 0, amount = 100,	info = {}, type = "item", slot = 7, }, }		
+	[1] = { name = "water_bottle", price = 7, amount = 100, info = {}, type = "item", slot = 1, },
+	[2] = { name = "sandwich", price = 15, amount = 250, info = {}, type = "item", slot = 2, },
+	[3] = { name = "bandage", price = 85, amount = 100, info = {}, type = "item", slot = 3, },
+	[4] = { name = "weapon_flashlight", price = 350, amount = 100, info = {}, type = "item", slot = 4, }, 
+	[5] = { name = "drill",	price = 2500, amount = 100, info = {}, type = "item", slot = 5, }, 
+	[6] = { name = "handdrill",	price = 250, amount = 100, info = {}, type = "item",	slot = 6, },
+	[7] = { name = "drillbit", price = 10, amount = 100,	info = {}, type = "item", slot = 7, }, }		
 }
 
 Crafting = {}
 Crafting.SmeltMenu = {
 	[1] = { ["copper"] = { ["copperore"] = 1 }, ['amount'] = 4 },
 	[2] = { ["goldbar"] = { ["goldore"] = 1 } },
-	[3] = { ["goldbar"] = { ["goldchain"] = 2 } },
+	[3] = { ["goldbar"] = { ["goldchain"] = 1 } },
 	[4] = { ["goldbar"] = { ["10kgoldchain"] = 1 } },
-	[5] = { ["goldbar"] = { ["gold_ring"] = 4 } },
+	[5] = { ["goldbar"] = { ["gold_ring"] = 1 } },
 	[6] = { ["iron"] = { ["ironore"] = 1 } },
 	[7] = { ["steel"] = { ["ironore"] = 1, ["carbon"] = 1 } },
 	--[8] = { ["aluminum"] = { ["can"] = 2, }, ['amount'] = 3 },
@@ -160,15 +160,15 @@ Crafting.GemCut = {
 	[4] = { ["sapphire"] = { ["uncut_sapphire"] = 1 }, },
 }
 Crafting.RingCut = {
-	[1] = { ["gold_ring"] = { ["goldbar"] = 1 }, ['amount'] = 3 },
+	[1] = { ["gold_ring"] = { ["goldbar"] = 1 }, ['amount'] = 1 },
 	[2] = { ["diamond_ring"] = { ["gold_ring"] = 1, ["diamond"] = 1 }, },
 	[3] = { ["emerald_ring"] = { ["gold_ring"] = 1, ["emerald"] = 1 }, },
 	[4] = { ["ruby_ring"] = { ["gold_ring"] = 1, ["ruby"] = 1 }, },
 	[5] = { ["sapphire_ring"] = { ["gold_ring"] = 1, ["sapphire"] = 1 }, },
 }
 Crafting.NeckCut = {
-	[1] = { ["goldchain"] = { ["goldbar"] = 1 }, ['amount'] = 3  },
-	[2] = { ["10kgoldchain"] = { ["goldbar"] = 1 }, ['amount'] = 2 },
+	[1] = { ["goldchain"] = { ["goldbar"] = 1 }, ['amount'] = 1  },
+	[2] = { ["10kgoldchain"] = { ["goldbar"] = 1 }, ['amount'] = 1 },
 	[3] = { ["diamond_necklace"] = { ["goldchain"] = 1, ["emerald"] = 1 }, },
 	[4] = { ["ruby_necklace"] = { ["goldchain"] = 1, ["diamond"] = 1 }, },
 	[5] = { ["sapphire_necklace"] = { ["goldchain"] = 1, ["ruby"] = 1 }, },

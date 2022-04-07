@@ -6,7 +6,7 @@ function CreateBlips()
 			SetBlipAsShortRange(blip, true)
 			SetBlipSprite(blip, 527)
 			SetBlipColour(blip, 81)
-			SetBlipScale(blip, 0.7)
+			SetBlipScale(blip, 0.5)
 			SetBlipDisplay(blip, 6)
 
 			BeginTextCommandSetBlipName('STRING')
@@ -217,7 +217,8 @@ end)
 -----------------------------------------------------------
 --Mining Store Opening
 RegisterNetEvent('jim-mining:openShop', function ()
-	TriggerServerEvent("inventory:server:OpenInventory", "shop", "mine", Config.Items)
+	TriggerServerEvent("jim-shops:ShopOpen", "shop", "mine", Config.Items)
+	--TriggerServerEvent("inventory:server:OpenInventory", "shop", "mine", Config.Items)
 end)
 ------------------------------------------------------------
 -- Mine Ore Command / Animations
